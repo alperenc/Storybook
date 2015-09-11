@@ -13,6 +13,7 @@
 		C7BE837A1BA38D79001E9BFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BE83781BA38D79001E9BFC /* Main.storyboard */; };
 		C7BE837C1BA38D79001E9BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7BE837B1BA38D79001E9BFC /* Assets.xcassets */; };
 		C7BE837F1BA38D79001E9BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7BE837D1BA38D79001E9BFC /* LaunchScreen.storyboard */; };
+		C7BE83881BA38E20001E9BFC /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BE83871BA38E20001E9BFC /* Story.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C7BE837B1BA38D79001E9BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7BE837E1BA38D79001E9BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7BE83801BA38D79001E9BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7BE83861BA38E20001E9BFC /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		C7BE83871BA38E20001E9BFC /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				C7BE83721BA38D79001E9BFC /* AppDelegate.h */,
 				C7BE83731BA38D79001E9BFC /* AppDelegate.m */,
+				C7BE83861BA38E20001E9BFC /* Story.h */,
+				C7BE83871BA38E20001E9BFC /* Story.m */,
 				C7BE83751BA38D79001E9BFC /* ViewController.h */,
 				C7BE83761BA38D79001E9BFC /* ViewController.m */,
 				C7BE83781BA38D79001E9BFC /* Main.storyboard */,
@@ -152,6 +157,7 @@
 				C7BE83771BA38D79001E9BFC /* ViewController.m in Sources */,
 				C7BE83741BA38D79001E9BFC /* AppDelegate.m in Sources */,
 				C7BE83711BA38D79001E9BFC /* main.m in Sources */,
+				C7BE83881BA38E20001E9BFC /* Story.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
