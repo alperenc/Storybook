@@ -14,7 +14,8 @@
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *author;
 @property (strong, nonatomic) UIImage *coverImage;
+@property (strong, nonatomic) NSURL *audioURL;
 
-- (instancetype)initWithTitle:(NSString *)title author:(NSString *)author coverImage:(UIImage *)coverImage;
+- (instancetype)initWithTitle:(NSString *)title author:(NSString *)author;
 
 @end

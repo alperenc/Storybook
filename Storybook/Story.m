@@ -10,13 +10,12 @@
 
 @implementation Story
 
-- (instancetype)initWithTitle:(NSString *)title author:(NSString *)author coverImage:(UIImage *)coverImage
+- (instancetype)initWithTitle:(NSString *)title author:(NSString *)author
 {
     self = [super init];
     if (self) {
         self.title = title;
         self.author = author;
-        self.coverImage = coverImage;
     }
     return self;
 }

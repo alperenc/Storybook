@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Story Part View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StoryPartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,12 +15,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaY-Oc-5Rl">
+                                <rect key="frame" x="180" y="428" width="36" height="36"/>
+                                <animations/>
+                                <state key="normal" image="camera-icon"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDb-ML-mdG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wR-KT-UEJ">
+                                <rect key="frame" x="388" y="430" width="32" height="32"/>
+                                <animations/>
+                                <state key="normal" image="microphone-icon"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tis-cR-hMK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o15-Hg-MyA">
+                                <rect key="frame" x="315" y="431" width="105" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yeq-wX-9Zu"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pFB-Xt-y36">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8OQ-s7-gyc"/>
+                                    <constraint firstAttribute="height" constant="240" id="e5g-dT-YJa"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gRD-d3-T42" appends="YES" id="bDF-b5-tqz"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="o15-Hg-MyA" firstAttribute="centerY" secondItem="MaY-Oc-5Rl" secondAttribute="centerY" id="D5Z-V9-V8t"/>
+                            <constraint firstItem="9wR-KT-UEJ" firstAttribute="centerY" secondItem="MaY-Oc-5Rl" secondAttribute="centerY" id="KL5-gJ-kWY"/>
+                            <constraint firstItem="pFB-Xt-y36" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Spa-kM-DHL"/>
+                            <constraint firstItem="pFB-Xt-y36" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bBi-xo-NIH"/>
+                            <constraint firstItem="9wR-KT-UEJ" firstAttribute="trailing" secondItem="pFB-Xt-y36" secondAttribute="trailing" id="dqa-eE-fBo"/>
+                            <constraint firstItem="MaY-Oc-5Rl" firstAttribute="top" secondItem="pFB-Xt-y36" secondAttribute="bottom" constant="8" id="iQT-Wa-rHl"/>
+                            <constraint firstItem="o15-Hg-MyA" firstAttribute="trailing" secondItem="pFB-Xt-y36" secondAttribute="trailing" id="yNi-32-10p"/>
+                            <constraint firstItem="MaY-Oc-5Rl" firstAttribute="leading" secondItem="pFB-Xt-y36" secondAttribute="leading" id="zZ5-Uc-quv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="pFB-Xt-y36" id="kBy-56-pUd"/>
+                        <outlet property="recordButton" destination="9wR-KT-UEJ" id="RBX-Rh-Gvw"/>
+                        <outlet property="stopButton" destination="o15-Hg-MyA" id="zpD-HH-V4a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gRD-d3-T42">
+                    <connections>
+                        <action selector="playAudio:" destination="BYZ-38-t0r" id="FYX-8e-hTP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera-icon" width="36" height="36"/>
+        <image name="microphone-icon" width="32" height="32"/>
+    </resources>
 </document>
